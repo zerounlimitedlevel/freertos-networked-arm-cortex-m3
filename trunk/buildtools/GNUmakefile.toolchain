@@ -1,0 +1,30 @@
+#
+#
+#
+#
+#
+#
+
+#check if we have a C lint tool
+LINT=
+
+FINDLINT:=$(shell which lint)
+
+ifeq ($(FINDLINT),)
+FINDLINT:=$(shell which splint)
+endif
+
+ifneq ($(FINDLINT),)
+LINT    = $(FINDLINT)
+endif
+
+CC=arm-none-eabi-gcc
+OBJCOPY=arm-none-eabi-objcopy
+LDSCRIPT=standalone.ld
+
+# should use --gc-sections but the debugger does not seem to be able to cope with the option.
+LINKER_FLAGS=-nostartfiles -Xlinker -oRTOSDemo.axf -Xlinker -M -Xlinker -Map=rtosdemo.map -Xlinker --no-gc-sections
+
+DEBUG=-g
+OPTIM=-O0
+

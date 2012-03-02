@@ -1,0 +1,19 @@
+
+PROJECT_DIR = $(PWD)
+
+ROOT_DIR = $(realpath $(PROJECT_DIR)/../../../../)
+
+PROCESSOR_DIR = $(realpath $(PROJECT_DIR)/../..)
+
+BUILDTOOLS_DIR = $(ROOT_DIR)/buildtools/
+
+
+FREERTOS_DIR = $(ROOT_DIR)/FreeRTOS
+FREERTOS_SOURCE_DIR = $(FREERTOS_DIR)/Source
+FREERTOS_DEMO_COMMON_DIR = $(FREERTOS_DIR)/Demo/Common/Minimal
+FREERTOS_DEMO_COMMON_INCLUDE_DIR = $(FREERTOS_DIR)/Demo/Common/include
+
+
+LUMINARY_DRIVER_DIR = $(FREERTOS_DIR)/Demo/Common/drivers/LuminaryMicro
+
+

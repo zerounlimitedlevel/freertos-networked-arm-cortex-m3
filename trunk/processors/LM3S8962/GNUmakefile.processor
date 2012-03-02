@@ -1,0 +1,9 @@
+#
+#
+#
+#  This make file define the processor defs which are common to ALL projects based on this processor
+#
+#
+
+COMPONENTS += luminary_drivers
+
