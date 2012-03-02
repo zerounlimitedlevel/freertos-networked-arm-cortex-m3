@@ -1,0 +1,36 @@
+#
+#
+#
+#
+
+
+# include the processor defs
+include $(PROCESSOR_DIR)/GNUmakefile.processor
+
+
+#################################################
+# pull in the toolchain make file now that we have the processor defs
+
+include $(BUILDTOOLS_DIR)/GNUmakefile.toolchain
+
+################################################
+
+###############################################
+#
+# build up the vpath based on the components
+
+# always the project dir replaces the component dir in the search order
+vpath % $(PROJECT_DIR)
+
+# walk the component list and add to the vpath
+
+
+#
+##############################################
+
+
+
+all ::
+	@echo "PROJECT: $(PROJECT_DIR)"
+	@echo "PROCESSOR: $(PROCESSOR_DIR)"
+	@echo "COMPONENTS: $(COMPONENTS)"
