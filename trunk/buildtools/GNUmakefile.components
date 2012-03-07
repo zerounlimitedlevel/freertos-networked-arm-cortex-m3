@@ -1,2 +1,79 @@
 
 
+# START component load macro
+define LOAD_COMPONENT
+
+# check the component file exists
+#COMPNENT_FILE := $$(realpath $(BUILDTOOLS_DIR)/components/$(1))
+$(if ($(COMPNENT_FILE),), $(echo in if), $(echo in else))
+#ifeq ($$(COMPNENT_FILE),)
+# (error The component $(1) was not found at $(realpath $(BUILDTOOLS_DIR)/components/$(1)))
+#(error Heelo Errror <<$(COMPNENT_FILE)>>)
+#(warn Hello)
+#endif
+
+# load the component file
+include $(BUILDTOOLS_DIR)/components/$(1)
+
+# check the components, component defines file exists
+#ifeq ($(realpath $($(1).path)/GNUmakefile.component),)
+# $ (error The component $(1) was found but, it's define file was not at $($(1).path)/GNUmakefile.component)
+#endif
+
+# include the component make file
+include $(ROOT_DIR)/$$($(1).path)/GNUmakefile.component
+
+##T_VPATH_C = $(foreach item, $$(VPATH_C) , $(patsubst  %, $(ROOT_DIR)/$$($(1).path)/%, $$(item)))
+#$(1).vpath_c := $$($(1).vpath_c:%=$(ROOT_DIR)/$$($(1).path)/%)
+#$(1).vpath_h := $$($(1).vpath_c:%=$(ROOT_DIR)/$$($(1).path)/%)
+#
+#vpath %.c $$($(1).vpath_c)
+#vpath %.h $$($(1).vpath_h)
+
+##vpath %.c $$($(1).vpath_c:%=$(ROOT_DIR)/$$($(1).path)/%)
+##vpath %.h $$($(1).vpath_c:%=$(ROOT_DIR)/$$($(1).path)/%)
+VPATH += $$($(1).vpath_c:%=$(ROOT_DIR)/$$($(1).path)/%) $$($(1).vpath_c:%=$(ROOT_DIR)/$$($(1).path)/%)
+
+
+INCLUDES += $$($(1).vpath_h:%=-I$(ROOT_DIR)/$$($(1).path)/%)
+#INCLUDES += $$($(1).vpath_h:%=-I%)
+
+$(1).obj =  $$(patsubst %.c, $(OBJDIR)/$(1)/%.o, $$($(1).cfiles))
+$(1).obj += $$(patsubst %.s, $(OBJDIR)/$(1)/%.o, $$(ASMS))
+
+
+$(OBJDIR)/$(1) :
+	@[ -d $$@ ] || mkdir -p $$@
+
+$(OBJDIR)/$(1)/asm :
+	@[ -d $$@ ] || mkdir -p $$@
+
+$(OBJDIR)/$(1)/%.o : %.c  $(OBJDIR)/$(1)
+	$(CC) -c $$(CFLAGS) $$(INCLUDES) -o $$@ $$< 
+	@echo " "
+
+$(OBJDIR)/$(1)/%.o : %.s 
+	$(ASM) $$(ASMFLAGS) -o $$@ $$<
+
+all ::
+	@echo " "
+	@echo COMP: $(1) 
+	@echo VPATH_C: $$($(1).vpath_c)
+	@echo VPATH_H: $$($(1).vpath_h)
+	@echo obj: $$($(1).obj)
+	@echo INC: $$(INCLUDES)
+	@echo $(OBJDIR)/$(1)/%.o 
+	@echo " "
+
+endef
+
+# split out the private code from the public
+COMPONENTS_PRIVATE = $(filter private_%, $(COMPONENTS))
+COMPONENTS_PUBLIC  = $(filter-out $(COMPONENTS_PRIVATE), $(COMPONENTS))
+
+# load the component files for the public code
+##$(foreach acomponent, $(strip $(COMPONENTS_PUBLIC)),$(eval $(call LOAD_COMPONENT, $(acomponent))))
+$(foreach acomponent, $(strip $(COMPONENTS_PUBLIC)),$(eval $(call LOAD_COMPONENT,$(acomponent))))
+
+include $(BUILDTOOLS_DIR)/GNUmakefile.private
+

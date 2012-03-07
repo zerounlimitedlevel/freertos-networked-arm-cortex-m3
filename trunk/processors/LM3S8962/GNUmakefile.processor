@@ -5,5 +5,16 @@
 #
 #
 
-COMPONENTS += luminary_drivers
+CFLAGS += -D GCC_ARMCM3_LM3S102 -D inline= -mthumb -mcpu=cortex-m3 $(OPTIM) 
+CFLAGS += -T$(LDSCRIPT)
+CFALGS += -D PACK_STRUCT_END=__attribute\(\(packed\)\) 
+CFLAGS += -D ALIGN_STRUCT_END=__attribute\(\(aligned\(4\)\)\)
+CFLAGS += -D sprintf=usprintf -D snprintf=usnprintf -D printf=uipprintf 
+CFLAGS += -ffunction-sections -fdata-sections 
+
+INCLUDES += -I$(ROOT_DIR)/processors/drivers/LuminaryMicro
+
+#freertos_minimal.cfiles  += IntQueueTimer.c
+freertos_minimal.vpath_c += processors/LM3S8962/
+freertos_minimal.vpath_h += processors/LM3S8962/
 

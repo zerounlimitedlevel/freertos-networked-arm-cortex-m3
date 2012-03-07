@@ -1,0 +1,18 @@
+ifeq ($(freertos_kernel.main),)
+$(error FreeRTOS main must be defined as freertos_kernel.main = somefile.c)
+endif
+
+# note the port dir may need to be re-visited later
+freertos_minimal.cfiles += BlockQ.c \
+                           blocktim.c \
+                           death.c \
+                           integer.c \
+                           PollQ.c \
+                           semtest.c \
+                           GenQTest.c \
+                           QPeek.c \
+                           recmutex.c \
+                           IntQueue.c
+
+freertos_minimal.vpath_c += .
+freertos_minimal.vpath_h += ../include  .

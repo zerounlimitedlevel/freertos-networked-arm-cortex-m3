@@ -1,0 +1,19 @@
+
+ifeq ($(freertos_kernel.main),)
+$(error FreeRTOS main must be defined as freertos_kernel.main = somefile.c)
+endif
+
+ifeq ($(freertos_kernel.port),)
+$(error FreeRTOS port must be defined.  For example: GCC/ARM_CM3)
+endif
+
+ifeq ($(freertos_kernel.memmang),)
+$(error FreeRTOS memory managment must be chosen.  For example: heap_2.c)
+endif
+
+
+# note the port dir may need to be re-visited later
+freertos_kernel.cfiles += $(freertos_kernel.main) $(freertos_kernel.memmang) port.c list.c queue.c tasks.c
+
+freertos_kernel.vpath_c += portable/MemMang portable/$(freertos_kernel.port) .
+freertos_kernel.vpath_h += portable/$(freertos_kernel.port) include
