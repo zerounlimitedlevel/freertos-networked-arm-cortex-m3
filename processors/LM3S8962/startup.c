@@ -237,15 +237,3 @@ IntDefaultHandler(void)
     }
 }
 
-//*****************************************************************************
-//
-// A dummy printf function to satisfy the calls to printf from uip.  This
-// avoids pulling in the run-time library.
-//
-//*****************************************************************************
-int
-uipprintf(const char *fmt, ...)
-{
-    return(0);
-}
-

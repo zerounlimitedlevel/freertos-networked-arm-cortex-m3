@@ -5,6 +5,8 @@
 
 
 # include the processor defs
+LDSCRIPT=$(PROCESSOR_DIR)/standalone.ld
+
 include $(PROCESSOR_DIR)/GNUmakefile.processor
 
 
@@ -20,17 +22,20 @@ include $(BUILDTOOLS_DIR)/GNUmakefile.toolchain
 # build up the vpath based on the components
 
 # always the project dir replaces the component dir in the search order
-vpath % $(PROJECT_DIR)
+##vpath % $(PROJECT_DIR)
 
 # walk the component list and add to the vpath
-
+include $(BUILDTOOLS_DIR)/GNUmakefile.components
 
 #
 ##############################################
 
 
+#all ::
+#	@echo "PROJECT: $(PROJECT_DIR)"
+#	@echo "PROCESSOR: $(PROCESSOR_DIR)"
+#	@echo "COMPONENTS: $(COMPONENTS)"
+#	@echo "freertos.obj is $(freertos.obj)"
 
-all ::
-	@echo "PROJECT: $(PROJECT_DIR)"
-	@echo "PROCESSOR: $(PROCESSOR_DIR)"
-	@echo "COMPONENTS: $(COMPONENTS)"
+clobber clean ::
+	rm -rf $(OBJDIR)
