@@ -29,6 +29,9 @@ freertos_kernel.main = freertos_main.c
 freertos_kernel.port = GCC/ARM_CM3
 freertos_kernel.memmang = heap_2.c
 
+# need to move these to another module...
+freertos_kernel.cfiles += timertest.c ParTest.c IntQueueTimer.c ustdlib.c emac.c
+
 #
 # ALWAY LAST
 # include the build tools makefile to get all of the standard targets
@@ -49,7 +52,9 @@ all :: $(freertos_kernel.obj) $(freertos_minimal.obj)
 
 all :: example.bin
 
-VPATH += ../../
+VPATH += ../../ ../../../drivers/LuminaryMicro/
+
+LIBS = ../../../drivers/LuminaryMicro/arm-none-eabi-gcc/libdriver.a
 
 $(OBJDIR)/startup.o : startup.c
 	$(CC) -c $(CFLAGS) -O1 $< -o $@
