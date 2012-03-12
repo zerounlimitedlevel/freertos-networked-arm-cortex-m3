@@ -1,0 +1,56 @@
+Build Project 'boot_serial' - Target 'boot_serial'
+compiling bl_autobaud.c...
+compiling bl_can.c...
+compiling bl_check.c...
+compiling bl_decrypt.c...
+compiling bl_enet.c...
+compiling bl_flash.c...
+compiling bl_i2c.c...
+compiling bl_main.c...
+compiling bl_packet.c...
+compiling bl_ssi.c...
+assembling bl_startup_rvmdk.S...
+compiling bl_uart.c...
+compiling bl_usb.c...
+compiling bl_usbfuncs.c...
+linking...
+Program Size: Code=1180 RO-data=4 RW-data=16 ZI-data=272  
+User command #1: fromelf --bin --output .\rvmdk\boot_serial.bin .\rvmdk\boot_serial.axf
+".\rvmdk\boot_serial.axf" - 0 Error(s), 0 Warning(s).
+Load "F:\\Mywork\\ARM\\LM3S8962\\LM3S8962-DK-B-CD\\Code\\StellarisWare\\boards\\ek-lm3s8962\\boot_serial\\rvmdk\\boot_serial.AXF" 
+
+JLink info:
+-----------
+DLL: V4.11i, compiled Jan 28 2010 19:55:25
+Firmware: J-Link ARM V8 compiled Dec  1 2009 11:42:48
+Hardware: V8.00
+S/N : 20100214 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFull 
+---
+* JLink Info: TotalIRLen = 4, IRPrint = 0x01
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: TotalIRLen = 4, IRPrint = 0x01
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+
+Target info:
+------------
+Device: LM3S8962
+VTarget = 3.203V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          4
+JTAG speed: 2000 kHz
+---
+* JLink Info: TotalIRLen = 4, IRPrint = 0x01
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Erase Done.
+Programming Done.
+Verify OK.

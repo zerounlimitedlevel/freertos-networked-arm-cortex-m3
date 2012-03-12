@@ -1,0 +1,25 @@
+*** Creating Trace Output File '.\rvmdk\boot_demo_eth.tra' Ok.
+### Preparing for ADS-LD.
+### Creating ADS-LD Command Line
+### List of Objects: adding '".\rvmdk\boot_demo_eth.o"'
+### List of Objects: adding '".\rvmdk\lwiplib.o"'
+### List of Objects: adding '".\rvmdk\rit128x96x4.o"'
+### List of Objects: adding '".\rvmdk\startup_rvmdk.o"'
+### List of Objects: adding '".\rvmdk\swupdate.o"'
+### List of Objects: adding '".\rvmdk\ustdlib.o"'
+### List of Objects: adding '"..\..\..\driverlib\rvmdk\driverlib.lib"'
+### ADS-LD Command completed:
+--cpu Cortex-M3 ".\rvmdk\boot_demo_eth.o" ".\rvmdk\lwiplib.o" ".\rvmdk\rit128x96x4.o" ".\rvmdk\startup_rvmdk.o" ".\rvmdk\swupdate.o" ".\rvmdk\ustdlib.o" "..\..\..\driverlib\rvmdk\driverlib.lib" --library_type=microlib --strict --scatter "boot_demo_eth.sct" 
+--entry Reset_Handler --autoat --summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\rvmdk\boot_demo_eth.map" -o ".\rvmdk\boot_demo_eth.axf"### Preparing Environment (PrepEnvAds)
+### ADS-LD Output File: '.\rvmdk\boot_demo_eth.axf'
+### ADS-LD Command File: '.\rvmdk\boot_demo_eth.lnp'
+### Checking for dirty Components...
+### Creating CmdFile '.\rvmdk\boot_demo_eth.lnp', Handle=0x00003654
+### Writing '.lnp' file
+### ADS-LD Command file '.\rvmdk\boot_demo_eth.lnp' is ready.
+### ADS-LD: About to start ADS-LD Thread.
+### ADS-LD: executed with 0 errors
+### Updating obj list
+### LDADS_file() completed.

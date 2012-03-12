@@ -1,0 +1,212 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html><head>
+<title>Static Call Graph - [.\rvmdk\boot_serial.axf]</title></head>
+<body><HR>
+<H1>Static Call Graph for image .\rvmdk\boot_serial.axf</H1><HR>
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, RVCT4.0 [Build 728]: Last Updated: Sun Jul 11 17:16:46 2010
+<BR><P>
+<H3>Maximum Stack Usage =         64 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
+Call chain for Maximum Stack Depth:</H3>
+Reset_Handler_In_SRAM &rArr; Updater &rArr; SendPacket
+<P>
+<H3>
+Functions with no stack information
+</H3><UL>
+ <LI><a href="#[166a0bc]">ProcessorInit</a>
+ <LI><a href="#[166a080]">Reset_Handler</a>
+ <LI><a href="#[166a134]">StartApplication</a>
+ <LI><a href="#[166b28c]">Delay</a>
+ <LI><a href="#[166a2d8]">Reset_Handler_In_SRAM</a>
+ <LI><a href="#[166a29c]">UpdateHandler_In_SRAM</a>
+ <LI><a href="#[166a260]">IntDefaultHandler</a>
+ <LI><a href="#[166a224]">NmiSR</a>
+ <LI><a href="#[166a1e8]">FaultISR</a>
+ <LI><a href="#[166a1ac]">UpdateHandler</a>
+</UL>
+</UL>
+<P>
+<H3>
+Mutually Recursive functions
+</H3> <LI><a href="#[166b28c]">Delay</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[166b28c]">Delay</a><BR>
+ <LI><a href="#[166a260]">IntDefaultHandler</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[166a260]">IntDefaultHandler</a><BR>
+ <LI><a href="#[166a224]">NmiSR</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[166a224]">NmiSR</a><BR>
+ <LI><a href="#[166a1e8]">FaultISR</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[166a1e8]">FaultISR</a><BR>
+</UL>
+<P>
+<H3>
+Function Pointers
+</H3><UL>
+ <LI><a href="#[166a080]">Reset_Handler</a>
+ <LI><a href="#[166a224]">NmiSR</a>
+ <LI><a href="#[166a1e8]">FaultISR</a>
+ <LI><a href="#[166a260]">IntDefaultHandler</a>
+ <LI><a href="#[166a260]">IntDefaultHandler</a>
+ <LI><a href="#[166a260]">IntDefaultHandler</a>
+ <LI><a href="#[166a1ac]">UpdateHandler</a>
+ <LI><a href="#[166a260]">IntDefaultHandler</a>
+ <LI><a href="#[166a260]">IntDefaultHandler</a>
+ <LI><a href="#[166a260]">IntDefaultHandler</a>
+ <LI><a href="#[166a260]">IntDefaultHandler</a>
+ <LI><a href="#[166a2d8]">Reset_Handler_In_SRAM</a>
+ <LI><a href="#[166a29c]">UpdateHandler_In_SRAM</a>
+</UL>
+<P>
+<H3>
+Global Symbols
+</H3>
+<P><STRONG><a name="[166a0bc]"></a>ProcessorInit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, bl_startup_rvmdk.o(RESET))
+<BR><BR>[Called By]<UL><LI><a href="#[166a080]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Reset_Handler
+<LI><a href="#[166a1ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UpdateHandler
+</UL>
+
+<P><STRONG><a name="[166a080]"></a>Reset_Handler</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, bl_startup_rvmdk.o(RESET))
+<BR><BR>[Calls]<UL><LI><a href="#[166a0bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ProcessorInit
+</UL>
+
+<P><STRONG><a name="[166a134]"></a>StartApplication</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, bl_startup_rvmdk.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[166a2d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Reset_Handler_In_SRAM
+</UL>
+
+<P><STRONG><a name="[166b28c]"></a>Delay</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, bl_startup_rvmdk.o(.text))
+<BR><BR>[Calls]<UL><LI><a href="#[166b28c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Delay
+</UL>
+<BR>[Called By]<UL><LI><a href="#[166b28c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Delay
+<LI><a href="#[166b340]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ConfigureDevice
+</UL>
+
+<P><STRONG><a name="[166b2c8]"></a>AckPacket</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, bl_packet.o(i.AckPacket))
+<BR><BR>[Calls]<UL><LI><a href="#[166a74c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTSend
+</UL>
+<BR>[Called By]<UL><LI><a href="#[166b304]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Updater
+</UL>
+
+<P><STRONG><a name="[166c1c8]"></a>BLInternalFlashStartAddrCheck</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, bl_flash.o(i.BLInternalFlashStartAddrCheck))
+<BR><BR>[Called By]<UL><LI><a href="#[166b304]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Updater
+</UL>
+
+<P><STRONG><a name="[166d410]"></a>CheckForceUpdate</STRONG> (Thumb, 40 bytes, Stack size 0 bytes, bl_check.o(i.CheckForceUpdate))
+<BR><BR>[Called By]<UL><LI><a href="#[166a2d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Reset_Handler_In_SRAM
+</UL>
+
+<P><STRONG><a name="[166a800]"></a>CheckSum</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, bl_packet.o(i.CheckSum))
+<BR><BR>[Called By]<UL><LI><a href="#[166b214]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SendPacket
+<LI><a href="#[166b250]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ReceivePacket
+</UL>
+
+<P><STRONG><a name="[166b340]"></a>ConfigureDevice</STRONG> (Thumb, 98 bytes, Stack size 8 bytes, bl_main.o(i.ConfigureDevice))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8 + Unknown Stack Size
+<LI>Call Chain = ConfigureDevice
+</UL>
+<BR>[Calls]<UL><LI><a href="#[166b28c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Delay
+</UL>
+<BR>[Called By]<UL><LI><a href="#[166a2d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Reset_Handler_In_SRAM
+</UL>
+
+<P><STRONG><a name="[166a7c4]"></a>NakPacket</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, bl_packet.o(i.NakPacket))
+<BR><BR>[Calls]<UL><LI><a href="#[166a74c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTSend
+</UL>
+<BR>[Called By]<UL><LI><a href="#[166b250]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ReceivePacket
+</UL>
+
+<P><STRONG><a name="[166b250]"></a>ReceivePacket</STRONG> (Thumb, 104 bytes, Stack size 24 bytes, bl_packet.o(i.ReceivePacket))
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = ReceivePacket
+</UL>
+<BR>[Calls]<UL><LI><a href="#[166a788]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTReceive
+<LI><a href="#[166a7c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NakPacket
+<LI><a href="#[166a800]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CheckSum
+</UL>
+<BR>[Called By]<UL><LI><a href="#[166b304]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Updater
+</UL>
+
+<P><STRONG><a name="[166b214]"></a>SendPacket</STRONG> (Thumb, 80 bytes, Stack size 24 bytes, bl_packet.o(i.SendPacket))
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = SendPacket
+</UL>
+<BR>[Calls]<UL><LI><a href="#[166a74c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTSend
+<LI><a href="#[166a788]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTReceive
+<LI><a href="#[166a800]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CheckSum
+</UL>
+<BR>[Called By]<UL><LI><a href="#[166b304]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Updater
+</UL>
+
+<P><STRONG><a name="[166b1d8]"></a>UARTFlush</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, bl_uart.o(i.UARTFlush))
+<BR><BR>[Called By]<UL><LI><a href="#[166a74c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTSend
+<LI><a href="#[166b304]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Updater
+</UL>
+
+<P><STRONG><a name="[166a788]"></a>UARTReceive</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, bl_uart.o(i.UARTReceive))
+<BR><BR>[Called By]<UL><LI><a href="#[166b214]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SendPacket
+<LI><a href="#[166b250]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ReceivePacket
+</UL>
+
+<P><STRONG><a name="[166a74c]"></a>UARTSend</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, bl_uart.o(i.UARTSend))
+<BR><BR>[Calls]<UL><LI><a href="#[166b1d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTFlush
+</UL>
+<BR>[Called By]<UL><LI><a href="#[166a7c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NakPacket
+<LI><a href="#[166b214]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SendPacket
+<LI><a href="#[166b2c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AckPacket
+</UL>
+
+<P><STRONG><a name="[166b304]"></a>Updater</STRONG> (Thumb, 442 bytes, Stack size 40 bytes, bl_main.o(i.Updater))
+<BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = Updater &rArr; SendPacket
+</UL>
+<BR>[Calls]<UL><LI><a href="#[166b1d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTFlush
+<LI><a href="#[166b214]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SendPacket
+<LI><a href="#[166b250]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ReceivePacket
+<LI><a href="#[166b2c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AckPacket
+<LI><a href="#[166c1c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLInternalFlashStartAddrCheck
+</UL>
+<BR>[Called By]<UL><LI><a href="#[166a29c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UpdateHandler_In_SRAM
+<LI><a href="#[166a2d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Reset_Handler_In_SRAM
+</UL>
+<P>
+<H3>
+Local Symbols
+</H3>
+<P><STRONG><a name="[166a2d8]"></a>Reset_Handler_In_SRAM</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, bl_startup_rvmdk.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 64 + Unknown Stack Size
+<LI>Call Chain = Reset_Handler_In_SRAM &rArr; Updater &rArr; SendPacket
+</UL>
+<BR>[Calls]<UL><LI><a href="#[166a134]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StartApplication
+<LI><a href="#[166b304]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Updater
+<LI><a href="#[166b340]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ConfigureDevice
+<LI><a href="#[166d410]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CheckForceUpdate
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> bl_startup_rvmdk.o(RESET)
+</UL>
+<P><STRONG><a name="[166a29c]"></a>UpdateHandler_In_SRAM</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, bl_startup_rvmdk.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 64 + Unknown Stack Size
+<LI>Call Chain = UpdateHandler_In_SRAM &rArr; Updater &rArr; SendPacket
+</UL>
+<BR>[Calls]<UL><LI><a href="#[166b304]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Updater
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> bl_startup_rvmdk.o(RESET)
+</UL>
+<P><STRONG><a name="[166a260]"></a>IntDefaultHandler</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, bl_startup_rvmdk.o(.text))
+<BR><BR>[Calls]<UL><LI><a href="#[166a260]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IntDefaultHandler
+</UL>
+<BR>[Called By]<UL><LI><a href="#[166a260]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IntDefaultHandler
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> bl_startup_rvmdk.o(RESET)
+</UL>
+<P><STRONG><a name="[166a224]"></a>NmiSR</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, bl_startup_rvmdk.o(RESET))
+<BR><BR>[Calls]<UL><LI><a href="#[166a224]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NmiSR
+</UL>
+<BR>[Called By]<UL><LI><a href="#[166a224]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NmiSR
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> bl_startup_rvmdk.o(RESET)
+</UL>
+<P><STRONG><a name="[166a1e8]"></a>FaultISR</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, bl_startup_rvmdk.o(RESET))
+<BR><BR>[Calls]<UL><LI><a href="#[166a1e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FaultISR
+</UL>
+<BR>[Called By]<UL><LI><a href="#[166a1e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FaultISR
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> bl_startup_rvmdk.o(RESET)
+</UL>
+<P><STRONG><a name="[166a1ac]"></a>UpdateHandler</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, bl_startup_rvmdk.o(RESET))
+<BR><BR>[Calls]<UL><LI><a href="#[166a0bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ProcessorInit
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> bl_startup_rvmdk.o(RESET)
+</UL><P>
+<H3>
+Undefined Global Symbols
+</H3><HR></body></html>
