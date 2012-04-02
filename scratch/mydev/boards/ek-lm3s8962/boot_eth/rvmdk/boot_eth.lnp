@@ -1,0 +1,4 @@
+--cpu Cortex-M3 ".\rvmdk\bl_autobaud.o" ".\rvmdk\bl_can.o" ".\rvmdk\bl_check.o" ".\rvmdk\bl_decrypt.o" ".\rvmdk\bl_enet.o" ".\rvmdk\bl_flash.o" ".\rvmdk\bl_i2c.o" ".\rvmdk\bl_main.o" ".\rvmdk\bl_packet.o" ".\rvmdk\bl_ssi.o" ".\rvmdk\bl_startup_rvmdk.o" ".\rvmdk\bl_uart.o" ".\rvmdk\bl_usb.o" ".\rvmdk\bl_usbfuncs.o" --library_type=microlib --strict --scatter "..\..\..\boot_loader\bl_link.sct" 
+--entry Reset_Handler --autoat --summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\rvmdk\boot_eth.map" -o ".\rvmdk\boot_eth.axf"
