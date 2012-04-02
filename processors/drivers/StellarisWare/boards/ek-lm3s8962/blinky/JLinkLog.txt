@@ -1,0 +1,27 @@
+
+T138C 000:384 SEGGER J-Link ARM V4.11i (beta) Log File (0001ms, 0384ms total)
+T138C 000:384 DLL Compiled: Jan 28 2010 19:55:25 (0001ms, 0384ms total)
+T138C 000:384 Logging started @ 2010-07-11 18:03 (0001ms, 0384ms total)
+T138C 000:385 JLINKARM_SetWarnOutHandler(...) (0000ms, 0385ms total)
+T138C 000:385 JLINKARM_OpenEx(...)
+Firmware: J-Link ARM V8 compiled Dec  1 2009 11:42:48
+Hardware: V8.00
+S/N: 20100214
+Feature(s): RDI,FlashDL,FlashBP,JFlash,GDBFull  returns O.K. (0114ms, 0385ms total)
+T138C 000:499 JLINKARM_SetErrorOutHandler(...) (0000ms, 0499ms total)
+T138C 000:499 JLINKARM_TIF_Select(JLINKARM_TIF_JTAG)  returns 0x00 (0000ms, 0499ms total)
+T138C 000:499 JLINKARM_SetSpeed(2000) (0000ms, 0499ms total)
+T138C 000:500 JLINKARM_GetHardwareVersion()  returns 0x13880 (0000ms, 0500ms total)
+T138C 000:500 JLINKARM_GetDLLVersion()  returns 41109 (0000ms, 0500ms total)
+T138C 000:500 JLINKARM_GetFirmwareString(...) (0000ms, 0500ms total)
+T138C 000:500 JLINKARM_GetDLLVersion()  returns 41109 (0000ms, 0500ms total)
+T138C 000:500 JLINKARM_GetCompileDateTime() (0000ms, 0500ms total)
+T138C 000:500 JLINKARM_GetFirmwareString(...) (0000ms, 0500ms total)
+T138C 000:500 JLINKARM_GetHardwareVersion()  returns 0x13880 (0000ms, 0500ms total)
+T138C 000:500 JLINKARM_SetResetType(JLINKARM_RESET_TYPE_NORMAL)  returns JLINKARM_RESET_TYPE_NORMAL (0000ms, 0500ms total)
+T138C 000:501 JLINKARM_Reset()
+  ***** Error: Supply voltage too low (1 Volt is required, Measured: 0.0 Volt).
+Please check target power.No matching core found. Selecting default core (ARM7). (0001ms, 0501ms total)
+T138C 000:502 JLINKARM_GetIdData(...) (0000ms, 0502ms total)
+T138C 000:510 JLINKARM_GetCompileDateTime() (0000ms, 0502ms total)
+T138C 049:024 JLINKARM_Close() (0034ms, 0502ms total)

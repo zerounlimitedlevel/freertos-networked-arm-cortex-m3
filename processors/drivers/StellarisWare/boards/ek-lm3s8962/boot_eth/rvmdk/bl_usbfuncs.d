@@ -1,0 +1,9 @@
+.\rvmdk\bl_usbfuncs.o: ..\..\..\boot_loader\bl_usbfuncs.c
+.\rvmdk\bl_usbfuncs.o: ..\..\..\inc/hw_types.h
+.\rvmdk\bl_usbfuncs.o: ..\..\..\inc/hw_memmap.h
+.\rvmdk\bl_usbfuncs.o: ..\..\..\inc/hw_usb.h
+.\rvmdk\bl_usbfuncs.o: ..\..\..\inc/hw_sysctl.h
+.\rvmdk\bl_usbfuncs.o: ..\..\..\inc/hw_nvic.h
+.\rvmdk\bl_usbfuncs.o: ..\..\..\inc/hw_ints.h
+.\rvmdk\bl_usbfuncs.o: .\bl_config.h
+.\rvmdk\bl_usbfuncs.o: ..\..\..\boot_loader/bl_usbfuncs.h

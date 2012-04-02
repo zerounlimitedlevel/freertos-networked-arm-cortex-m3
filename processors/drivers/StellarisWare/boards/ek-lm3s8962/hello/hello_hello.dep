@@ -1,0 +1,6 @@
+Dependencies for Project 'hello', Target 'hello': (DO NOT MODIFY !)
+F (.\hello.c)(0x4C1632C7)(-c --cpu Cortex-M3 -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I.. -I..\..\.. -I "C:\Keil\\ARM\INC" -I "C:\Keil\\ARM\INC\Luminary" -Drvmdk -DPART_LM3S8962 -o ".\rvmdk\hello.o" --omf_browse ".\rvmdk\hello.crf" --depend ".\rvmdk\hello.d")
+F (..\drivers\rit128x96x4.c)(0x4C1632C6)(-c --cpu Cortex-M3 -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I.. -I..\..\.. -I "C:\Keil\\ARM\INC" -I "C:\Keil\\ARM\INC\Luminary" -Drvmdk -DPART_LM3S8962 -o ".\rvmdk\rit128x96x4.o" --omf_browse ".\rvmdk\rit128x96x4.crf" --depend ".\rvmdk\rit128x96x4.d")
+F (.\startup_rvmdk.S)(0x4C1632C7)(--cpu Cortex-M3 -g --apcs=interwork --pd "__MICROLIB SETA 1" -I "C:\Keil\\ARM\INC" -I "C:\Keil\\ARM\INC\Luminary" -o ".\rvmdk\startup_rvmdk.o")
+F (..\..\..\driverlib\rvmdk\driverlib.lib)(0x4C163BF1)()
+F (.\readme.txt)(0x4C1632C7)()
