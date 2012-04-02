@@ -1,0 +1,4 @@
+--cpu Cortex-M3 ".\rvmdk\boot_demo1.o" ".\rvmdk\rit128x96x4.o" ".\rvmdk\startup_rvmdk.o" ".\rvmdk\ustdlib.o" "..\..\..\driverlib\rvmdk\driverlib.lib" --library_type=microlib --strict --scatter "boot_demo1.sct" 
+--entry Reset_Handler --autoat --summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\rvmdk\boot_demo1.map" -o ".\rvmdk\boot_demo1.axf"

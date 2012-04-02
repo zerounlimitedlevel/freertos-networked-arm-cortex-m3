@@ -1,0 +1,17 @@
+.\rvmdk\bl_can.o: ..\..\..\boot_loader\bl_can.c
+.\rvmdk\bl_can.o: ..\..\..\inc/hw_can.h
+.\rvmdk\bl_can.o: ..\..\..\inc/hw_gpio.h
+.\rvmdk\bl_can.o: ..\..\..\inc/hw_memmap.h
+.\rvmdk\bl_can.o: ..\..\..\inc/hw_nvic.h
+.\rvmdk\bl_can.o: ..\..\..\inc/hw_flash.h
+.\rvmdk\bl_can.o: ..\..\..\inc/hw_sysctl.h
+.\rvmdk\bl_can.o: ..\..\..\inc/hw_types.h
+.\rvmdk\bl_can.o: ..\..\..\inc/hw_uart.h
+.\rvmdk\bl_can.o: .\bl_config.h
+.\rvmdk\bl_can.o: ..\..\..\boot_loader/bl_can.h
+.\rvmdk\bl_can.o: ..\..\..\boot_loader/bl_check.h
+.\rvmdk\bl_can.o: ..\..\..\boot_loader/bl_can_timing.h
+.\rvmdk\bl_can.o: ..\..\..\boot_loader/bl_flash.h
+.\rvmdk\bl_can.o: ..\..\..\driverlib/rom.h
+.\rvmdk\bl_can.o: ..\..\..\boot_loader/bl_hooks.h
+.\rvmdk\bl_can.o: ..\..\..\boot_loader/bl_uart.h
