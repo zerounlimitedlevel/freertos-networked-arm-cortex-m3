@@ -4,6 +4,7 @@ http://e2e.ti.com/support/microcontrollers/stellaris_arm_cortex-m3_microcontroll
 
 
 There are defaults for all ISRs when you use the G++ tool chain :-\
+This applies to ALL of there tool chains and not just the pro versions... As I hit this using the lite version!!!!
 
 
 <pre>
